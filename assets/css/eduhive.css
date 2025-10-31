@@ -4083,23 +4083,29 @@ a:hover .instructor-card-two__social__icon {
   }
 }
 .main-header--two {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  z-index: 999;
+    position: fixed;           /* Fixed to top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;   /* Solid white */
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bottom shadow */
+    transition: all 0.3s ease;
 }
+
 .main-header--two .container-fluid {
-  max-width: 1650px;
+    max-width: 1650px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 .main-header--two .main-header__left {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 .main-header--two .main-header__courses {
-  position: relative;
-  margin-left: 104px;
+    position: relative;
+    margin-left: 104px;
 }
 @media (max-width: 1599px) {
   .main-header--two .main-header__courses {
@@ -16347,3 +16353,4 @@ body.boxed-wrapper .main-footer__shape-five {
   }
 }
 /*# sourceMappingURL=eduhive.css.map */
+

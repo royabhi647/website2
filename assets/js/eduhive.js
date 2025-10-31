@@ -279,7 +279,7 @@
     $(".sticky-header")
       .clone()
       .insertAfter(".sticky-header")
-      .addClass("sticky-header--cloned");
+      // .addClass("sticky-header--cloned");
   }
 
   if ($(".mobile-nav__container .main-menu__list").length) {
