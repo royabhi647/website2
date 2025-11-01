@@ -594,7 +594,7 @@ h6 {
   -webkit-appearance: none;
   border: none;
   outline: none !important;
-  padding: 9px 9px 9px 15px;
+  padding: 4px 12px 4px 12px;
   background-color: var(--eduhive-base, #674CEF);
   font-family: var(--eduhive-font, "Plus Jakarta Sans", sans-serif);
   font-size: 16px;
@@ -4321,8 +4321,8 @@ a:hover .instructor-card-two__social__icon {
 }
 .main-menu .main-menu__list > li {
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 18px;
+  padding-bottom: 18px;
 }
 .main-menu .main-menu__list > li.dropdown > a {
   position: relative;

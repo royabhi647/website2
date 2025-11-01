@@ -594,7 +594,7 @@ h6 {
   -webkit-appearance: none;
   border: none;
   outline: none !important;
-  padding: 9px 15px 9px 9px;
+  padding: 4px 15px 4px 9px;
   background-color: var(--eduhive-base, #674CEF);
   font-family: var(--eduhive-font, "Plus Jakarta Sans", sans-serif);
   font-size: 16px;
