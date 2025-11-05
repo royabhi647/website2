@@ -2006,8 +2006,7 @@
                     <div class="row-cards-testimonial">
                         <!-- Card 1 -->
                         <div class="single-testimonial-card">
-                            <div class="cube-testimonial-video"
-                                data-video-url="https://youtu.be/OvIRNlLCB0U?si=ycOZDYkat5DzrsCF"
+                            <div class="cube-testimonial-video" data-video-url="assets/vids/sho.mp4"
                                 onclick="openTestimonialModal(this)">
                                 <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
                                     alt="User" class="img-testimonial-video">
@@ -2019,7 +2018,6 @@
                                         <div class="details-testimonial-user">
                                             <span class="label-testimonial-name">Emily Manekshaw</span>
                                         </div>
-                                        <!-- <div class="label-testimonial-logo">In-logo</div> -->
                                     </div>
                                 </div>
                                 <div class="layer-testimonial-bt">
@@ -2029,8 +2027,7 @@
                         </div>
                         <!-- Card 2 -->
                         <div class="single-testimonial-card">
-                            <div class="cube-testimonial-video"
-                                data-video-url="https://youtu.be/OvIRNlLCB0U?si=ycOZDYkat5DzrsCF"
+                            <div class="cube-testimonial-video" data-video-url="assets/vids/sho.mp4"
                                 onclick="openTestimonialModal(this)">
                                 <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop"
                                     alt="User" class="img-testimonial-video">
@@ -2039,7 +2036,7 @@
                                 </button>
                                 <div class="layer-testimonial-user">
                                     <div class="details-testimonial-user">
-                                        <span class="label-testimonial-name">Emily Manekshaw</span>
+                                        <span class="label-testimonial-name">Sophia Williams</span>
                                     </div>
                                 </div>
                                 <div class="layer-testimonial-bt">
@@ -2049,8 +2046,7 @@
                         </div>
                         <!-- Card 3 -->
                         <div class="single-testimonial-card">
-                            <div class="cube-testimonial-video"
-                                data-video-url="https://youtu.be/OvIRNlLCB0U?si=ycOZDYkat5DzrsCF"
+                            <div class="cube-testimonial-video" data-video-url="assets/vids/sho.mp4"
                                 onclick="openTestimonialModal(this)">
                                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
                                     alt="User" class="img-testimonial-video">
@@ -2069,8 +2065,7 @@
                         </div>
                         <!-- Card 4 -->
                         <div class="single-testimonial-card">
-                            <div class="cube-testimonial-video"
-                                data-video-url="https://youtu.be/OvIRNlLCB0U?si=ycOZDYkat5DzrsCF"
+                            <div class="cube-testimonial-video" data-video-url="assets/vids/sho.mp4"
                                 onclick="openTestimonialModal(this)">
                                 <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
                                     alt="User" class="img-testimonial-video">
@@ -2104,9 +2099,10 @@
             <div class="inner-modal-testimonial" onclick="event.stopPropagation()">
                 <span class="close-modal-testimonial" onclick="closeTestimonialModal()">&times;</span>
                 <div class="box-modal-testimonial-video">
-                    <iframe id="modalPlayerTestimonial" src="" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                    <!-- Changed from iframe to video element for local files -->
+                    <video id="modalPlayerTestimonial" controls>
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </div>
@@ -2357,7 +2353,7 @@
 
             .close-modal-testimonial {
                 position: absolute;
-                top: -38px;
+                top: -26px;
                 right: 0;
                 color: #fff;
                 font-size: 38px;
@@ -2438,26 +2434,40 @@
                 const videoUrl = element.getAttribute('data-video-url');
                 const modal = document.getElementById('modal-testimonial-video');
                 const player = document.getElementById('modalPlayerTestimonial');
-                player.src = videoUrl + "?autoplay=1";
+
+                // Set video source and type
+                player.innerHTML = `<source src="${videoUrl}" type="video/mp4">`;
+                player.load();
+                player.play().catch(e => {
+                    console.log("Autoplay prevented:", e);
+                    // Autoplay was prevented, but user can still click play
+                });
+
                 modal.classList.add('active');
                 document.body.style.overflow = 'hidden';
             }
+
             function closeTestimonialModal() {
                 const modal = document.getElementById('modal-testimonial-video');
                 const player = document.getElementById('modalPlayerTestimonial');
-                player.src = "";
+
+                player.pause();
+                player.currentTime = 0;
+                player.innerHTML = ''; // Clear the source
+
                 modal.classList.remove('active');
                 document.body.style.overflow = 'auto';
             }
+
             function scrollTestimonialCards(direction) {
                 const container = document.querySelector('.row-cards-testimonial');
                 const scrollAmount = 309;
                 direction === 'left' ? container.scrollLeft -= scrollAmount : container.scrollLeft += scrollAmount;
             }
+
             document.addEventListener('keydown', function (e) {
                 if (e.key === 'Escape') closeTestimonialModal();
             });
-
         </script>
 
 
@@ -2601,13 +2611,14 @@
                                 <span>99,000</span>
                             </div>
                             <p class="subtext">(Inclusive Of All Taxes)</p>
-                            <button class="btn btn-white" onclick="handleEnquire()">Enquire Now</button>
+                            <button class="btn btn-white" onclick="handleEnquire()" style="padding: 12px 32px;">Enquire
+                                Now</button>
                         </div>
 
                         <!-- Advisory Card -->
                         <div class="advisory-card">
                             <img src="assets/images/blog/blog-2-1.jpg" alt="Team collaboration" class="advisory-image">
-                            <button class="btn btn-purple" onclick="handleTalkToAdvisor()">
+                            <button class="btn btn-purple" onclick="handleTalkToAdvisor()" style="padding: 12px 32px;">
                                 Talk To Our Advisor <span class="arrow">→</span>
                             </button>
                         </div>
@@ -2677,7 +2688,7 @@
         }
 
         .btn {
-            padding: 12px 32px;
+            /* padding: 12px 32px; */
             border: none;
             border-radius: 6px;
             font-size: 1rem;
@@ -2954,158 +2965,253 @@
         }
     </script>
 
-    <section style="all: initial; font-family: 'Segoe UI', 'Arial', sans-serif;">
-        <div
-            style="min-height: 590px; width: 100vw; background: url('assets/images/about.png') center center/cover no-repeat; position: relative; display: flex; align-items: stretch; justify-content: flex-end; padding: 0;">
-            <div
-                style="width: 52vw; min-width: 470px; min-height: 590px; background: linear-gradient(95deg, #e8f5f3ef 62%, #e8f5f3e5 100%); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; backdrop-filter: blur(8px);">
-                <form
-                    style="width: 92%; max-width: 690px; margin-left: 24px; display: flex; flex-direction: column; align-items: flex-start;"
-                    autocomplete="off">
-                    <h2
-                        style="font-size: 2.5rem; color: #3a5456; font-weight: 700; margin: 0 0 30px 0; line-height: 1.2; letter-spacing: -0.5px; text-align: left;">
-                        Have Questions?<br>Contact us</h2>
+    <section class="contect-static-section">
+        <div class="contect-static-form-container">
+            <form class="contect-static-form" autocomplete="off">
+                <h2 class="contect-static-title">Have Questions?<br>Contact us</h2>
 
-                    <!-- Row 1: Full Name and Email -->
-                    <div
-                        style="display: flex; gap: 14px; width: 100%; margin-bottom: 14px; position: relative; z-index: 1;">
-                        <input type="text" placeholder="Full Name*" required
-                            style="display: block; padding: 13px 14px; border-radius: 6px; border: 1px solid #d1d5db; background: #ffffff; color: #2d4547; font-size: 1rem; flex: 1 1 0; outline: none; transition: all 0.25s ease; font-weight: 400; font-family: 'Segoe UI', Arial, sans-serif;"
-                            onfocus="this.style.borderColor='#47bab7'; this.style.boxShadow='0 0 0 3px rgba(71, 186, 183, 0.1)'; this.style.zIndex='10';"
-                            onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none'; this.style.zIndex='1';"
-                            onmouseover="this.style.borderColor='#999'; this.style.boxShadow='0 1px 4px rgba(0, 0, 0, 0.08)';"
-                            onmouseout="if(this !== document.activeElement) { this.style.borderColor='#d1d5db'; this.style.boxShadow='none'; }" />
+                <!-- Row 1: Full Name and Email -->
+                <div class="contect-static-row">
+                    <input type="text" placeholder="Full Name*" required class="contect-static-input" />
+                    <input type="email" placeholder="Enter Email ID*" required class="contect-static-input" />
+                </div>
 
-                        <input type="email" placeholder="Enter Email ID*" required
-                            style="display: block; padding: 13px 14px; border-radius: 6px; border: 1px solid #d1d5db; background: #ffffff; color: #2d4547; font-size: 1rem; flex: 1 1 0; outline: none; transition: all 0.25s ease; font-weight: 400; font-family: 'Segoe UI', Arial, sans-serif;"
-                            onfocus="this.style.borderColor='#47bab7'; this.style.boxShadow='0 0 0 3px rgba(71, 186, 183, 0.1)'; this.style.zIndex='10';"
-                            onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none'; this.style.zIndex='1';"
-                            onmouseover="this.style.borderColor='#999'; this.style.boxShadow='0 1px 4px rgba(0, 0, 0, 0.08)';"
-                            onmouseout="if(this !== document.activeElement) { this.style.borderColor='#d1d5db'; this.style.boxShadow='none'; }" />
+                <!-- Row 2: Country Code, Contact Number, Location -->
+                <div class="contect-static-row">
+                    <div class="contect-static-select contect-static-country-code">
+                        <input type="text" placeholder="Country Code*" required class="contect-static-input" />
                     </div>
 
-                    <!-- Row 2: Country Code, Contact Number, and Location -->
-                    <div
-                        style="display: flex; gap: 14px; width: 100%; margin-bottom: 14px; position: relative; z-index: 1;">
-                        <select
-                            style="display: block; padding: 13px 14px; border-radius: 6px; border: 1px solid #d1d5db; background: #ffffff url('data:image/svg+xml,%3Csvg width=&quot;14&quot; height=&quot;8&quot; viewBox=&quot;0 0 14 8&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M1 1L7 7L13 1&quot; stroke=&quot;%23666&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/%3E%3C/svg%3E') no-repeat right 12px center; color: #2d4547; font-size: 1rem; flex: 0 0 145px; min-width: 145px; max-width: 145px; outline: none; transition: all 0.25s ease; font-weight: 400; font-family: 'Segoe UI', Arial, sans-serif; cursor: pointer; appearance: none; -webkit-appearance: none; -moz-appearance: none; padding-right: 36px;"
-                            onfocus="this.style.borderColor='#47bab7'; this.style.boxShadow='0 0 0 3px rgba(71, 186, 183, 0.1)'; this.style.zIndex='10'; this.style.backgroundColor='#ffffff';"
-                            onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none'; this.style.zIndex='1'; this.style.backgroundColor='#ffffff';"
-                            onmouseover="this.style.borderColor='#999'; this.style.boxShadow='0 1px 4px rgba(0, 0, 0, 0.08)'; this.style.backgroundColor='#fafafa';"
-                            onmouseout="if(this !== document.activeElement) { this.style.borderColor='#d1d5db'; this.style.boxShadow='none'; this.style.backgroundColor='#ffffff'; }">
-                            <option value=""
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 400; color: #888; background: white; min-height: 40px;">
-                                India (+91)</option>
-                            <option value="+1"
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 500; color: #2d4547; background: white; min-height: 40px;">
-                                USA (+1)</option>
-                            <option value="+44"
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 500; color: #2d4547; background: white; min-height: 40px;">
-                                UK (+44)</option>
-                            <option value="+1"
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 500; color: #2d4547; background: white; min-height: 40px;">
-                                Canada (+1)</option>
-                            <option value="+61"
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 500; color: #2d4547; background: white; min-height: 40px;">
-                                Australia (+61)</option>
-                        </select>
+                    <input type="tel" placeholder="Contact Number*" required
+                        class="contect-static-input contect-static-contact-number" />
 
-                        <input type="tel" placeholder="Contact Number*" required
-                            style="display: block; padding: 13px 14px; border-radius: 6px; border: 1px solid #d1d5db; background: #ffffff; color: #2d4547; font-size: 1rem; flex: 0 0 180px; min-width: 160px; outline: none; transition: all 0.25s ease; font-weight: 400; font-family: 'Segoe UI', Arial, sans-serif;"
-                            onfocus="this.style.borderColor='#47bab7'; this.style.boxShadow='0 0 0 3px rgba(71, 186, 183, 0.1)'; this.style.zIndex='10';"
-                            onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none'; this.style.zIndex='1';"
-                            onmouseover="this.style.borderColor='#999'; this.style.boxShadow='0 1px 4px rgba(0, 0, 0, 0.08)';"
-                            onmouseout="if(this !== document.activeElement) { this.style.borderColor='#d1d5db'; this.style.boxShadow='none'; }" />
-
-                        <select
-                            style="display: block; padding: 13px 14px; border-radius: 6px; border: 1px solid #d1d5db; background: #ffffff url('data:image/svg+xml,%3Csvg width=&quot;14&quot; height=&quot;8&quot; viewBox=&quot;0 0 14 8&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M1 1L7 7L13 1&quot; stroke=&quot;%23666&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/%3E%3C/svg%3E') no-repeat right 12px center; color: #2d4547; font-size: 1rem; flex: 1 1 0; min-width: 180px; outline: none; transition: all 0.25s ease; font-weight: 400; font-family: 'Segoe UI', Arial, sans-serif; cursor: pointer; appearance: none; -webkit-appearance: none; -moz-appearance: none; padding-right: 36px;"
-                            onfocus="this.style.borderColor='#47bab7'; this.style.boxShadow='0 0 0 3px rgba(71, 186, 183, 0.1)'; this.style.zIndex='10'; this.style.backgroundColor='#ffffff';"
-                            onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none'; this.style.zIndex='1'; this.style.backgroundColor='#ffffff';"
-                            onmouseover="this.style.borderColor='#999'; this.style.boxShadow='0 1px 4px rgba(0, 0, 0, 0.08)'; this.style.backgroundColor='#fafafa';"
-                            onmouseout="if(this !== document.activeElement) { this.style.borderColor='#d1d5db'; this.style.boxShadow='none'; this.style.backgroundColor='#ffffff'; }">
-                            <option value=""
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 400; color: #888; background: white; min-height: 40px;">
-                                Select Closest Location</option>
-                            <option value="bangalore"
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 500; color: #2d4547; background: white; min-height: 40px;">
-                                Bangalore</option>
-                            <option value="mumbai"
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 500; color: #2d4547; background: white; min-height: 40px;">
-                                Mumbai</option>
-                            <option value="delhi"
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 500; color: #2d4547; background: white; min-height: 40px;">
-                                Delhi</option>
-                            <option value="chennai"
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 500; color: #2d4547; background: white; min-height: 40px;">
-                                Chennai</option>
-                            <option value="hyderabad"
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 500; color: #2d4547; background: white; min-height: 40px;">
-                                Hyderabad</option>
-                            <option value="pune"
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 500; color: #2d4547; background: white; min-height: 40px;">
-                                Pune</option>
-                        </select>
+                    <div class="contect-static-select contect-static-location-select">
+                        <input type="text" placeholder="Enter Closest Location" required
+                            class="contect-static-input" />
                     </div>
+                </div>
 
-                    <!-- Row 3: Qualification -->
-                    <div
-                        style="display: flex; gap: 14px; width: 100%; margin-bottom: 10px; position: relative; z-index: 1;">
-                        <select
-                            style="display: block; padding: 13px 14px; border-radius: 6px; border: 1px solid #d1d5db; background: #ffffff url('data:image/svg+xml,%3Csvg width=&quot;14&quot; height=&quot;8&quot; viewBox=&quot;0 0 14 8&quot; fill=&quot;none&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M1 1L7 7L13 1&quot; stroke=&quot;%23666&quot; stroke-width=&quot;2&quot; stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot;/%3E%3C/svg%3E') no-repeat right 12px center; color: #2d4547; font-size: 1rem; flex: 1 1 0; outline: none; transition: all 0.25s ease; font-weight: 400; font-family: 'Segoe UI', Arial, sans-serif; cursor: pointer; appearance: none; -webkit-appearance: none; -moz-appearance: none; padding-right: 36px; width: 100%;"
-                            onfocus="this.style.borderColor='#47bab7'; this.style.boxShadow='0 0 0 3px rgba(71, 186, 183, 0.1)'; this.style.zIndex='10'; this.style.backgroundColor='#ffffff';"
-                            onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='none'; this.style.zIndex='1'; this.style.backgroundColor='#ffffff';"
-                            onmouseover="this.style.borderColor='#999'; this.style.boxShadow='0 1px 4px rgba(0, 0, 0, 0.08)'; this.style.backgroundColor='#fafafa';"
-                            onmouseout="if(this !== document.activeElement) { this.style.borderColor='#d1d5db'; this.style.boxShadow='none'; this.style.backgroundColor='#ffffff'; }">
-                            <option value=""
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 400; color: #888; background: white; min-height: 40px;">
-                                Select Qualification</option>
-                            <option value="highschool"
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 500; color: #2d4547; background: white; min-height: 40px;">
-                                High School</option>
-                            <option value="bachelors"
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 500; color: #2d4547; background: white; min-height: 40px;">
-                                Bachelor's Degree</option>
-                            <option value="masters"
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 500; color: #2d4547; background: white; min-height: 40px;">
-                                Master's Degree</option>
-                            <option value="phd"
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 500; color: #2d4547; background: white; min-height: 40px;">
-                                PhD</option>
-                            <option value="diploma"
-                                style="padding: 12px 16px; font-size: 1rem; font-weight: 500; color: #2d4547; background: white; min-height: 40px;">
-                                Diploma</option>
-                        </select>
+                <!-- Row 3: Qualification -->
+                <div class="contect-static-row">
+                    <div class="contect-static-select contect-static-qualification-select">
+                        <input type="text" placeholder="Enter Qualification" required
+                            class="contect-static-input" />
                     </div>
+                </div>
 
-                    <div style="display: flex; align-items: center; gap: 10px; margin: 8px 0 22px 0;">
-                        <input type="checkbox" id="compact-terms" required
-                            style="width: 18px; height: 18px; accent-color: #3b82f6; cursor: pointer; border-radius: 3px; flex-shrink: 0;" />
-                        <label for="compact-terms"
-                            style="color: #4b5563; font-size: 0.95rem; cursor: pointer; font-weight: 400; line-height: 1.5; font-family: 'Segoe UI', Arial, sans-serif;">
-                            I accept the <a href="#"
-                                style="color: #3b82f6; text-decoration: none; font-weight: 500; cursor: pointer; transition: color 0.2s;"
-                                onmouseover="this.style.color='#2563eb'; this.style.textDecoration='underline';"
-                                onmouseout="this.style.color='#3b82f6'; this.style.textDecoration='none';">Terms &
-                                Conditions</a>
-                        </label>
-                    </div>
+                <!-- Terms Checkbox -->
+                <div class="contect-static-checkbox-container">
+                    <input type="checkbox" id="compact-terms" required class="contect-static-checkbox" />
+                    <label for="compact-terms" class="contect-static-checkbox-label">
+                        I accept the <a href="#" class="contect-static-terms-link">Terms & Conditions</a>
+                    </label>
+                </div>
 
-                    <button type="submit"
-                        style="width: 100%; max-width: 260px; background: linear-gradient(135deg, #0f5846 0%, #0d4d3d 100%); color: #fff; font-weight: 600; font-size: 1.1rem; border: none; border-radius: 8px; padding: 15px 24px; cursor: pointer; box-shadow: 0 2px 12px rgba(15, 88, 70, 0.3); transition: all 0.3s ease; display: flex; justify-content: center; align-items: center; position: relative; overflow: hidden; font-family: 'Segoe UI', Arial, sans-serif;"
-                        onmouseover="this.style.background='linear-gradient(135deg, #0d4d3d 0%, #0a3d31 100%)'; this.style.boxShadow='0 4px 20px rgba(15, 88, 70, 0.4)'; this.style.transform='translateY(-1px)';"
-                        onmouseout="this.style.background='linear-gradient(135deg, #0f5846 0%, #0d4d3d 100%)'; this.style.boxShadow='0 2px 12px rgba(15, 88, 70, 0.3)'; this.style.transform='translateY(0)';"
-                        onmousedown="this.style.transform='translateY(0)';"
-                        onmouseup="this.style.transform='translateY(-1px)';">
-                        <span>Submit</span>
-                    </button>
-                </form>
-            </div>
+                <!-- Submit Button -->
+                <button type="submit" class="contect-static-submit-btn">
+                    <span>Submit</span>
+                </button>
+            </form>
         </div>
     </section>
 
     <style>
-        /* Additional global styles for better dropdown option visibility */
-        select option {
+        /* Reset and base */
+        .contect-static-reset * {
+            all: initial;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        /* Layout */
+        .contect-static-section {
+            min-height: 590px;
+            width: 100vw;
+            background: url('assets/images/about.png') center center/cover no-repeat;
+            position: relative;
+            display: flex;
+            align-items: stretch;
+            justify-content: flex-end;
+            padding: 0;
+        }
+
+        .contect-static-form-container {
+            width: 52vw;
+            min-width: 470px;
+            min-height: 590px;
+            background: linear-gradient(95deg, #e8f5f3ef 62%, #e8f5f3e5 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            backdrop-filter: blur(8px);
+        }
+
+        .contect-static-form {
+            width: 92%;
+            max-width: 690px;
+            margin-left: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .contect-static-title {
+            font-size: 2.5rem;
+            color: #3a5456;
+            font-weight: 700;
+            margin: 0 0 30px 0;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
+            text-align: left;
+        }
+
+        /* Input Row Base */
+        .contect-static-row {
+            display: flex;
+            gap: 14px;
+            width: 100%;
+            margin-bottom: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Input & Select Base */
+        .contect-static-input,
+        .contect-static-select {
+            display: block;
+            /* padding: 13px 14px; */
+            border-radius: 6px;
+            border: 1px solid #d1d5db;
+            background: #ffffff;
+            color: #2d4547;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.25s ease;
+            font-weight: 400;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        .contect-static-input:focus,
+        .contect-static-select:focus {
+            border-color: #47bab7;
+            box-shadow: 0 0 0 3px rgba(71, 186, 183, 0.1);
+            z-index: 10;
+        }
+
+        .contect-static-input:hover,
+        .contect-static-select:hover {
+            border-color: #999;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+        }
+
+        .contect-static-input:not(:focus):hover,
+        .contect-static-select:not(:focus):hover {
+            background-color: #fafafa;
+        }
+
+        .contect-static-input:not(:focus),
+        .contect-static-select:not(:focus) {
+            background-color: #ffffff;
+        }
+
+        /* Country Code Select */
+        .contect-static-country-code {
+            flex: 0 0 145px;
+            min-width: 145px;
+            max-width: 145px;
+            cursor: pointer;
+        }
+
+        /* Contact Number */
+        .contect-static-contact-number {
+            flex: 0 0 180px;
+            min-width: 160px;
+        }
+
+        /* Location & Qualification Select */
+        .contect-static-location-select,
+        .contect-static-qualification-select {
+            flex: 1 1 0;
+            min-width: 180px;
+            cursor: pointer;
+        }
+
+        .contect-static-qualification-select {
+            width: 100%;
+        }
+
+        /* Checkbox */
+        .contect-static-checkbox-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 8px 0 22px 0;
+        }
+
+        .contect-static-checkbox {
+            width: 18px;
+            height: 18px;
+            accent-color: #3b82f6;
+            cursor: pointer;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+
+        .contect-static-checkbox-label {
+            color: #4b5563;
+            font-size: 0.95rem;
+            cursor: pointer;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .contect-static-terms-link {
+            color: #3b82f6;
+            text-decoration: none;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .contect-static-terms-link:hover {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+
+        /* Submit Button */
+        .contect-static-submit-btn {
+            width: 100%;
+            max-width: 260px;
+            background: linear-gradient(135deg, #0f5846 0%, #0d4d3d 100%);
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 8px;
+            padding: 15px 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 12px rgba(15, 88, 70, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        .contect-static-submit-btn:hover {
+            background: linear-gradient(135deg, #0d4d3d 0%, #0a3d31 100%);
+            box-shadow: 0 4px 20px rgba(15, 88, 70, 0.4);
+            transform: translateY(-1px);
+        }
+
+        .contect-static-submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Dropdown Option Styles */
+        .contect-static-select option {
             padding: 12px 16px !important;
             font-size: 1rem !important;
             font-weight: 500 !important;
@@ -3115,71 +3221,71 @@
             line-height: 1.5 !important;
         }
 
-        select option:hover {
+        .contect-static-select option:hover {
             background: #e8f5f3 !important;
             color: #195b3e !important;
         }
 
-        select option:checked {
+        .contect-static-select option:checked {
             background: #47bab7 !important;
             color: white !important;
             font-weight: 600 !important;
         }
 
-        select option[value=""] {
+        .contect-static-select option[value=""] {
             color: #888 !important;
             font-weight: 400 !important;
         }
 
-        /* Responsive styles */
+        /* Responsive */
         @media (max-width: 1000px) {
-            section>div>div {
+            .contect-static-form-container {
                 width: 98vw !important;
                 min-width: 0 !important;
             }
 
-            h2 {
+            .contect-static-title {
                 font-size: 2rem !important;
             }
         }
 
         @media (max-width: 768px) {
-            section>div>div>form>div:nth-child(3) {
+            .contect-static-row:nth-child(3) {
                 flex-wrap: wrap !important;
             }
 
-            section>div>div>form>div:nth-child(3)>select:first-child {
+            .contect-static-country-code {
                 flex: 0 0 140px !important;
             }
 
-            section>div>div>form>div:nth-child(3)>input {
+            .contect-static-contact-number {
                 flex: 1 1 0 !important;
                 min-width: 0 !important;
             }
 
-            section>div>div>form>div:nth-child(3)>select:last-child {
+            .contect-static-location-select {
                 flex: 1 1 100% !important;
             }
         }
 
         @media (max-width: 650px) {
-            section>div>div>form>div {
+            .contect-static-row {
                 flex-direction: column !important;
                 gap: 12px !important;
             }
 
-            section>div>div>form>div>* {
+            .contect-static-row>* {
                 flex: 1 1 auto !important;
                 max-width: 100% !important;
                 min-width: 0 !important;
             }
 
-            button {
+            .contect-static-submit-btn {
                 width: 100% !important;
                 max-width: none !important;
             }
 
-            h2 {
+            .contect-static-title {
                 font-size: 1.75rem !important;
             }
         }
