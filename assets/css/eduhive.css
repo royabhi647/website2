@@ -379,11 +379,17 @@ h6 {
 }
 
 .page-wrapper {
-  position: relative;
+  /* position: relative;
   margin: 0 auto;
   width: 100%;
   min-width: 300px;
-  overflow: hidden;
+  overflow: hidden; */
+
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: clip; 
 }
 
 .section-space {
@@ -3972,6 +3978,7 @@ a:hover .instructor-card-two__social__icon {
   left: 0;
   z-index: 999;
 }
+
 .home-main-header .main-header {
   background-color: transparent;
 }
@@ -3981,57 +3988,72 @@ a:hover .instructor-card-two__social__icon {
   background-color: var(--eduhive-white, #FFFFFF);
   z-index: 999;
 }
+
 .main-header .container-fluid {
   position: relative;
   z-index: 1;
   max-width: 1450px;
 }
+
 .main-header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
 }
+
 @media (max-width: 1199px) {
   .main-header__inner {
     padding: 20px 0;
   }
 }
+
 .main-header__logo img {
   max-width: 100%;
   height: auto;
 }
+
 .main-header__right {
   display: flex;
   align-items: center;
 }
+
 .main-header__nav {
   margin-right: 96px;
 }
+
 @media (max-width: 1399px) {
   .main-header__nav {
     margin-right: 70px;
   }
 }
-.main-header__cart, .main-header__search {
+
+.main-header__cart,
+.main-header__search {
   position: relative;
   font-size: 16px;
   color: var(--eduhive-black, #20104B);
   line-height: 1;
   transition: all 500ms ease;
 }
-.main-header__cart svg, .main-header__search svg {
+
+.main-header__cart svg,
+.main-header__search svg {
   width: 1em;
   height: 1em;
   fill: currentColor;
 }
-.main-header__cart:hover, .main-header__search:hover {
+
+.main-header__cart:hover,
+.main-header__search:hover {
   color: var(--eduhive-base, #674CEF);
 }
+
 @media (max-width: 1199px) {
   .main-header__search {
     margin-left: 50px;
   }
+
   .main-header__search::before {
     content: "";
     width: 1px;
@@ -4043,80 +4065,91 @@ a:hover .instructor-card-two__social__icon {
     background-color: var(--eduhive-border-color, #DBD8E6);
   }
 }
+
 @media (max-width: 425px) {
   .main-header__search {
     margin-left: 36px;
   }
+
   .main-header__search::before {
     left: -18px;
   }
 }
+
 .main-header__cart {
   margin-left: 40px;
 }
+
 @media (max-width: 1399px) {
   .main-header__cart {
     margin-left: 35px;
   }
 }
+
 @media (max-width: 425px) {
   .main-header__cart {
     margin-left: 25px;
   }
 }
+
 .main-header__btn {
   margin-left: 80px;
 }
+
 @media (max-width: 1599px) {
   .main-header__btn {
     margin-left: 60px;
   }
 }
+
 @media (max-width: 1399px) {
   .main-header__btn {
     margin-left: 40px;
   }
 }
+
 @media (max-width: 767px) {
   .main-header__btn {
     display: none;
   }
 }
+
 .main-header--two {
-    position: fixed;           /* Fixed to top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;   /* Solid white */
-    z-index: 999;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bottom shadow */
-    transition: all 0.3s ease;
+  width: 100%;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .main-header--two .container-fluid {
-    max-width: 1650px;
-    margin: 0 auto;
-    padding: 0 15px;
+  max-width: 1650px;
 }
+
 .main-header--two .main-header__left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .main-header--two .main-header__courses {
-    position: relative;
-    margin-left: 104px;
+  position: relative;
+  margin-left: 104px;
 }
+
 @media (max-width: 1599px) {
   .main-header--two .main-header__courses {
     margin-left: 50px;
   }
 }
+
 @media (max-width: 1399px) {
   .main-header--two .main-header__courses {
     display: none;
   }
 }
+
 .main-header--two .main-header__courses__text {
   padding: 9px 12px;
   cursor: pointer;
@@ -4130,33 +4163,40 @@ a:hover .instructor-card-two__social__icon {
   border-radius: 6px;
   transition: all 500ms ease;
 }
+
 .main-header--two .main-header__courses__icon-list {
   margin-right: 10px;
   display: inline-flex;
   font-size: 20px;
 }
+
 .main-header--two .main-header__courses__icon-list svg {
   width: 1em;
   height: 1em;
   fill: currentColor;
 }
+
 .main-header--two .main-header__courses__icon-arrow {
   margin-left: 20px;
   display: inline-flex;
   transition: transform 500ms ease;
 }
+
 .main-header--two .main-header__courses__icon-arrow svg {
   width: 1em;
   height: 1em;
   fill: currentColor;
 }
+
 .main-header--two .main-header__courses:hover .main-header__courses__text {
   color: var(--eduhive-white, #FFFFFF);
   background-color: var(--eduhive-base, #674CEF);
 }
+
 .main-header--two .main-header__courses:hover .main-header__courses__icon-arrow {
   transform: rotate(180deg);
 }
+
 .main-header--two .main-header__courses__list {
   list-style: none;
   min-width: 225px;
@@ -4175,6 +4215,7 @@ a:hover .instructor-card-two__social__icon {
   background-color: var(--eduhive-white, #FFFFFF);
   box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
 }
+
 .main-header--two .main-header__courses__list li a {
   display: block;
   position: relative;
@@ -4186,64 +4227,80 @@ a:hover .instructor-card-two__social__icon {
   text-transform: capitalize;
   transition: all 500ms ease;
 }
+
 .main-header--two .main-header__courses__list li a:hover {
   background-color: var(--eduhive-base, #674CEF);
   color: var(--eduhive-white, #FFFFFF);
 }
+
 .main-header--two .main-header__courses__list li:first-child a {
   border-radius: 6px 6px 0 0;
 }
+
 .main-header--two .main-header__courses__list li:last-child a {
   border-radius: 0 0 6px 6px;
 }
+
 .main-header--two .main-header__courses__list li:not(:last-child) a {
   border-bottom: 1px solid RGBA(var(--eduhive-base-rgb, 103, 76, 239), 0.1);
 }
+
 .main-header--two .main-header__courses:hover .main-header__courses__list {
   opacity: 1;
   visibility: visible;
   transform: scaleY(1) translateZ(0px);
 }
+
 .main-header--two .main-header__nav {
   margin-right: 60px;
 }
+
 @media (max-width: 1599px) {
   .main-header--two .main-header__nav {
     margin-right: 50px;
   }
 }
+
 @media (min-width: 1400px) and (max-width: 1499px) {
-  .main-header--two .main-menu .main-menu__list > li + li {
+  .main-header--two .main-menu .main-menu__list>li+li {
     margin-left: 30px;
   }
 }
+
 .main-header--two .main-header__btn {
   margin-left: 60px;
 }
+
 @media (max-width: 1599px) {
   .main-header--two .main-header__btn {
     margin-left: 40px;
   }
 }
+
 @media (max-width: 767px) {
   .main-header--two .main-header__btn {
     display: none;
   }
 }
+
 .main-header--three {
   border-bottom: 1px solid var(--eduhive-border-color, #DBD8E6);
 }
+
 .main-header--three .main-header__courses__text {
   color: var(--eduhive-black, #20104B);
   border: 1px solid var(--eduhive-border-color, #DBD8E6);
 }
+
 .main-header--three .main-header__courses:hover .main-header__courses__text {
   border-color: var(--eduhive-base, #674CEF);
 }
+
 .main-header--three .main-header__courses__icon-list {
   color: var(--eduhive-secondary, #39D4D6);
   transition: all 500ms ease;
 }
+
 .main-header--three .main-header__courses:hover .main-header__courses__icon-list {
   color: var(--eduhive-white, #FFFFFF);
 }
@@ -4262,10 +4319,12 @@ a:hover .instructor-card-two__social__icon {
   visibility: hidden;
   transition: transform 500ms ease, visibility 500ms ease;
 }
+
 .sticky-header--cloned.active {
   transform: translateY(0%);
   visibility: visible;
 }
+
 .sticky-header--cloned.sticky-header--three {
   border: 0;
 }
@@ -4283,21 +4342,25 @@ a:hover .instructor-card-two__social__icon {
   cursor: pointer;
   z-index: 3;
 }
+
 @media (min-width: 1200px) {
   .mobile-nav__btn {
     display: none;
   }
 }
+
 .mobile-nav__btn span {
   width: 100%;
   height: 2px;
   background-color: var(--eduhive-black, #20104B);
   transition: all 500ms ease;
 }
+
 .mobile-nav__btn span:nth-child(2) {
   margin-top: 5px;
   margin-bottom: 5px;
 }
+
 .mobile-nav__btn:hover span {
   background-color: var(--eduhive-base, #674CEF);
 }
@@ -4305,6 +4368,7 @@ a:hover .instructor-card-two__social__icon {
 .main-menu {
   /* after third level no menu */
 }
+
 .main-menu .main-menu__list,
 .main-menu .main-menu__list ul {
   margin: 0;
@@ -4313,24 +4377,30 @@ a:hover .instructor-card-two__social__icon {
   align-items: center;
   display: none;
 }
+
 @media (min-width: 1200px) {
+
   .main-menu .main-menu__list,
   .main-menu .main-menu__list ul {
     display: flex;
   }
 }
-.main-menu .main-menu__list > li {
+
+.main-menu .main-menu__list>li {
   position: relative;
-  padding-top: 18px;
-  padding-bottom: 18px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
-.main-menu .main-menu__list > li.dropdown > a {
+
+.main-menu .main-menu__list>li.dropdown>a {
   position: relative;
 }
-.main-menu .main-menu__list > li + li {
+
+.main-menu .main-menu__list>li+li {
   margin-left: 38px;
 }
-.main-menu .main-menu__list > li > a {
+
+.main-menu .main-menu__list>li>a {
   position: relative;
   font-size: 16px;
   display: flex;
@@ -4341,11 +4411,13 @@ a:hover .instructor-card-two__social__icon {
   text-transform: capitalize;
   transition: all 500ms ease;
 }
-.main-menu .main-menu__list > li.current > a,
-.main-menu .main-menu__list > li:hover > a {
+
+.main-menu .main-menu__list>li.current>a,
+.main-menu .main-menu__list>li:hover>a {
   color: var(--eduhive-base, #674CEF);
   text-shadow: 0 0 0.5px currentColor;
 }
+
 .main-menu .main-menu__list li ul {
   position: absolute;
   top: 100%;
@@ -4365,15 +4437,18 @@ a:hover .instructor-card-two__social__icon {
   padding: 15px 20px 11px;
   box-shadow: 0px 10px 60px 0px rgba(0, 0, 0, 0.07);
 }
-.main-menu .main-menu__list li:hover > ul {
+
+.main-menu .main-menu__list li:hover>ul {
   opacity: 1;
   visibility: visible;
   transform: scaleY(1) translateZ(0px);
 }
-.main-menu .main-menu__list > .megamenu {
+
+.main-menu .main-menu__list>.megamenu {
   position: static;
 }
-.main-menu .main-menu__list > .megamenu > ul {
+
+.main-menu .main-menu__list>.megamenu>ul {
   top: 100% !important;
   left: 0 !important;
   right: 0 !important;
@@ -4381,12 +4456,14 @@ a:hover .instructor-card-two__social__icon {
   box-shadow: none;
   padding: 0;
 }
+
 .main-menu .main-menu__list li ul li {
   flex: 1 1 100%;
   width: 100%;
   position: relative;
 }
-.main-menu .main-menu__list li ul li > a {
+
+.main-menu .main-menu__list li ul li>a {
   font-family: var(--eduhive-font, "Plus Jakarta Sans", sans-serif);
   font-size: 14px;
   line-height: 26px;
@@ -4398,7 +4475,8 @@ a:hover .instructor-card-two__social__icon {
   transition: 400ms;
   margin-bottom: 4px;
 }
-.main-menu .main-menu__list li ul li > a::after {
+
+.main-menu .main-menu__list li ul li>a::after {
   position: absolute;
   right: 15px;
   top: 8px;
@@ -4413,33 +4491,39 @@ a:hover .instructor-card-two__social__icon {
   transition: all 500ms ease;
   transform: scale(0);
 }
-.main-menu .main-menu__list li ul li.current > a,
-.main-menu .main-menu__list li ul li:hover > a {
+
+.main-menu .main-menu__list li ul li.current>a,
+.main-menu .main-menu__list li ul li:hover>a {
   background-color: var(--eduhive-base, #674CEF);
   color: var(--eduhive-white, #FFFFFF);
 }
-.main-menu .main-menu__list li ul li.current > a::after,
-.main-menu .main-menu__list li ul li:hover > a::after {
+
+.main-menu .main-menu__list li ul li.current>a::after,
+.main-menu .main-menu__list li ul li:hover>a::after {
   visibility: visible;
   opacity: 1;
   transform: scale(1);
 }
-.main-menu .main-menu__list li ul li > ul {
+
+.main-menu .main-menu__list li ul li>ul {
   top: 0;
   left: calc(100% + 20px);
 }
-.main-menu .main-menu__list li ul li > ul.right-align {
+
+.main-menu .main-menu__list li ul li>ul.right-align {
   top: 0;
   left: auto;
   right: 100%;
 }
-.main-menu .main-menu__list li ul li > ul ul {
+
+.main-menu .main-menu__list li ul li>ul ul {
   display: none;
 }
 
 @media (min-width: 1200px) and (max-width: 1400px) {
-  .main-menu__list li:nth-last-child(1) ul li > ul,
-  .main-menu__list li:nth-last-child(2) ul li > ul {
+
+  .main-menu__list li:nth-last-child(1) ul li>ul,
+  .main-menu__list li:nth-last-child(2) ul li>ul {
     left: auto;
     right: calc(100% + 20px);
   }

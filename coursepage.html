@@ -51,13 +51,14 @@
 
     <!-- /.preloader -->
     <div class="page-wrapper">
-        <header class="main-header main-header--two sticky-header sticky-header--normal " style="z-index: 99999">
-            <div class="container-fluid">
+        <header class="main-header main-header--two sticky-header sticky-header--normal"
+            style="position: sticky; background-color: white;">
+            <div class="container">
                 <div class="main-header__inner">
                     <div class="main-header__left">
                         <div class="main-header__logo logo-retina">
                             <a href="index.html">
-                                <img src="assets/images/logo1.png" alt="eduhive HTML" width="209">
+                                <img src="assets/images/logo.png" alt="eduhive HTML" width="209">
                             </a>
                         </div><!-- /.main-header__logo -->
                         <div class="main-header__courses">
@@ -65,62 +66,83 @@
                                 <span class="main-header__courses__icon-list">
                                     <i class="icon-list"></i>
                                 </span>
-                                our courses
+                                Learning
                                 <span class="main-header__courses__icon-arrow">
                                     <i class="icon-chevron-down"></i>
                                 </span>
                             </div><!-- /.main-header__courses__text -->
-                            <ul class="main-header__courses__list">
-                                <li><a href="wordpress-development.html">Wordpress Development</a></li>
-                                <li><a href="data-science.html">Data Science</a></li>
-                                <li><a href="web-development.html">Web Development</a></li>
-                                <li><a href="uiux-design.html">UI/UX Design</a></li>
-                                <li><a href="graphics-design.html">Graphics Design</a></li>
-                                <li><a href="digital-marketing.html">Digital Marketing</a></li>
-                                <li><a href="search-engine-optimization.html">Search Engine Optimization</a></li>
-                                <li><a href="apps-development.html">Apps Development</a></li>
-                                <li><a href="web-design.html">Web Design</a></li>
+                            <ul class="main-header__courses__list" style="margin: 0px;">
+                                <li style="margin: 0px;"><a href="#">Neuroalchemy Transformation</a></li>
+                                <li><a href="#">Neuroscience of Resilience</a></li>
+                                <li><a href="#">The Science of Confidence</a></li>
+                                <li><a href="#">Mindful Manifestation </a></li>
+                                <li><a href="#">Brain Science</a></li>
+                                <li><a href="#">Cellular Rebirth </a></li>
+                                <li><a href="#">Stress Management </a></li>
+                                <li><a href="#">Goal Setting </a></li>
+                                <li><a href="#">NLP Fundamentals</a></li>
                             </ul><!-- /.main-header__courses__list -->
                         </div><!-- /.main-header__courses -->
-                        <nav class="main-header__nav main-menu" style="margin-left: 15px;">
-                            <ul class="main-menu__list" style="margin-left: 30px;">
-                                <li style="padding: 28px 0;">
-                                    <a href="about.html">Categories</a>
+                    </div><!-- /.main-header__left -->
+                    <div class="main-header__right" style="margin-right: 31px;">
+                        <nav class="main-header__nav main-menu">
+                            <ul class="main-menu__list">
+                                <li class="dropdown">
+                                    <a href="#" style="text-decoration: none;">Categories</a>
+                                    <ul>
+                                        <li><a href="#">All Categories</a></li>
+                                        <li><a href="#">Mind</a></li>
+                                        <li><a href="#">Body</a></li>
+                                        <li><a href="#">Soul</a></li>
+                                        <li><a href="#">Entrepreneurship</a></li>
+                                        <li><a href="#">Career</a></li>
+                                        <li><a href="#">Relationship</a></li>
+                                    </ul>
                                 </li>
-                                <li style="padding: 28px 0;">
-                                    <a href="about.html">Community</a>
+                                <li class="dropdown">
+                                    <a href="#" style="text-decoration: none;">Community</a>
+                                    <ul>
+                                        <li><a href="#">Community First</a></li>
+                                        <li><a href="#">Global Events</a></li>
+                                    </ul>
                                 </li>
-                                <li style="padding: 28px 0;">
-                                    <a href="about.html">Results</a>
+                                <li class="dropdown">
+                                    <a href="#" style="text-decoration: none;">Results</a>
+                                    <ul>
+                                        <li><a href="#">20000+ Case Studies</a></li>
+                                        <li><a href="#">Our Transformational Model</a></li>
+                                        <li><a href="#">How MindValley Works?</a></li>
+                                    </ul>
                                 </li>
-                                <li style="padding: 28px 0;">
-                                    <a href="about.html">At Work</a>
+                                <li class="dropdown">
+                                    <a href="#" style="text-decoration: none;">At Work</a>
+                                    <ul>
+                                        <li><a href="#">Business</a></li>
+                                        <li><a href="#">Find A Coach</a></li>
+                                        <li><a href="#">Become A Coach</a></li>
+
+                                    </ul>
                                 </li>
+
                             </ul>
                         </nav><!-- /.main-header__nav -->
-                    </div><!-- /.main-header__left -->
-                    <div class="main-header__right">
-
                         <div class="mobile-nav__btn mobile-nav__toggler">
                             <span></span>
                             <span></span>
                             <span></span>
-                        </div><!-- /.mobile-nav__toggler -->
-
-                        <a href="contact.html" class="main-header__btn eduhive-btn eduhive-btn--border">
-                            <span>Login</span>
-                        </a><!-- /.main-header__btn eduhive-btn -->
-                        <a href="contact.html" class="main-header__btn eduhive-btn">
+                        </div>
+                        <!--<a href="#" class="btn btn-outline-primary">Login</a>-->
+                        <a href="#" class="main-header__btn eduhive-btn"
+                            style="height:40px; width:160px; text-decoration: none; position: relative;">
                             <span>Start Now</span>
-                            <span class="eduhive-btn__icon">
+                            <span class="eduhive-btn__icon" style="position: absolute; right: 2px;">
                                 <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                             </span>
                         </a><!-- /.main-header__btn eduhive-btn -->
                     </div><!-- /.main-header__right -->
                 </div><!-- /.main-header__inner -->
             </div><!-- /.container-fluid -->
-        </header><!-- /.main-header -->
-
+        </header>
 
         <style>
             .page-header1 {
@@ -130,22 +152,20 @@
                 padding: 80px 0;
             }
 
-            .page-header1 .overlay {
+            /* .page-header1 .overlay {
                 position: absolute;
                 top: 0;
                 left: 0;
                 right: 0;
                 bottom: 0;
                 background: rgba(0, 0, 0, 0.5);
-                /* dark overlay */
                 z-index: 1;
-            }
+            } */
 
-            .page-header1 .container {
+            /* .page-header1 .container {
                 position: relative;
                 z-index: 2;
-                /* keeps content above overlay */
-            }
+            } */
 
             /********************
     *
@@ -335,162 +355,162 @@
         </script>
 
         <!-- Sticky -->
-         <div class="fixedbar-sticky-contact fixedbar-hide">
-        <button class="btn-sticky-callback" onclick="handleStickyCallback()">
-            <i class="fa fa-phone" style="font-size: 14px;"></i>
-            <span style="font-size: 12px; font-weight: 400;">Request a Callback</span>
-        </button>
-        <a href="https://wa.me/your-number" target="_blank" rel="noopener" class="btn-sticky-whatsapp">
-            <i class="fab fa-whatsapp" style="font-size: 14px;"></i>
-            <span style="font-size: 12px; font-weight: 400;">Say Hi! on Whatsapp</span>
-        </a>
-    </div>
+        <div class="fixedbar-sticky-contact fixedbar-hide">
+            <button class="btn-sticky-callback" onclick="handleStickyCallback()">
+                <i class="fa fa-phone" style="font-size: 14px;"></i>
+                <span style="font-size: 12px; font-weight: 400;">Request a Callback</span>
+            </button>
+            <a href="https://wa.me/your-number" target="_blank" rel="noopener" class="btn-sticky-whatsapp">
+                <i class="fab fa-whatsapp" style="font-size: 14px;"></i>
+                <span style="font-size: 12px; font-weight: 400;">Say Hi! on Whatsapp</span>
+            </a>
+        </div>
 
-    <style>
-        .fixedbar-sticky-contact {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100vw;
-            min-height: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 18px;
-            background: rgba(255, 255, 255, 0.97);
-            z-index: 9999;
-            box-shadow: 0 -2px 22px 0 rgba(40, 48, 78, 0.08), 0 0.2px 0 0 #d2dee2;
-            border-top: 2px solid #ddeaea;
-            padding: 0;
-            backdrop-filter: blur(3px);
-            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            transform: translateY(100%);
-            opacity: 0;
-        }
+        <style>
+            .fixedbar-sticky-contact {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100vw;
+                min-height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 18px;
+                background: rgba(255, 255, 255, 0.97);
+                z-index: 9999;
+                box-shadow: 0 -2px 22px 0 rgba(40, 48, 78, 0.08), 0 0.2px 0 0 #d2dee2;
+                border-top: 2px solid #ddeaea;
+                padding: 0;
+                backdrop-filter: blur(3px);
+                transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                transform: translateY(100%);
+                opacity: 0;
+            }
 
-        .fixedbar-sticky-contact.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
+            .fixedbar-sticky-contact.show {
+                transform: translateY(0);
+                opacity: 1;
+            }
 
-        /* Remove this class - we don't need it anymore */
-        /* .fixedbar-hide {
+            /* Remove this class - we don't need it anymore */
+            /* .fixedbar-hide {
     display: none !important;
   } */
 
-        /* Callback Button */
-        .btn-sticky-callback {
-            display: flex;
-            align-items: center;
-            font-size: 1.16rem;
-            line-height: 1.3;
-            border-radius: 8px;
-            border: 2px solid #0d6651;
-            background: #fff;
-            color: #096c50;
-            padding: 10px 28px 10px 22px;
-            font-weight: 600;
-            letter-spacing: 0;
-            box-shadow: 0 1.2px 7px 0 rgba(44, 90, 92, 0.06);
-            cursor: pointer;
-            outline: none;
-            gap: 12px;
-            transition: all .17s;
-        }
-
-        .btn-sticky-callback:hover,
-        .btn-sticky-callback:focus {
-            background: #ecfff6;
-            color: #044b38;
-            border-color: #089971;
-        }
-
-        /* WhatsApp Button */
-        .btn-sticky-whatsapp {
-            display: flex;
-            align-items: center;
-            font-size: 1.16rem;
-            border-radius: 8px;
-            padding: 10px 34px 10px 24px;
-            font-weight: 600;
-            background: #38c457;
-            color: #fff;
-            border: none;
-            text-decoration: none;
-            gap: 13px;
-            box-shadow: 0 1.2px 7px 0 rgba(64, 196, 87, 0.09);
-            transition: all .16s;
-        }
-
-        .btn-sticky-whatsapp:hover,
-        .btn-sticky-whatsapp:focus {
-            background: #249f3e;
-            color: #fff;
-        }
-
-        /* Icons */
-        .btn-sticky-callback i,
-        .btn-sticky-whatsapp i {
-            font-size: 1.25em;
-            margin-right: 7px;
-            display: inline-block;
-            vertical-align: -2px;
-        }
-
-        @media (max-width:680px) {
-            .fixedbar-sticky-contact {
-                flex-direction: column;
-                gap: 9px;
-                padding: 8px 0 9px 0;
-                min-height: auto;
-            }
-
-            .btn-sticky-callback,
-            .btn-sticky-whatsapp {
-                width: 98vw;
-                justify-content: center;
-                padding: 12px 0;
-                font-size: 1rem;
-                border-radius: 9px;
+            /* Callback Button */
+            .btn-sticky-callback {
+                display: flex;
+                align-items: center;
+                font-size: 1.16rem;
+                line-height: 1.3;
+                border-radius: 8px;
+                border: 2px solid #0d6651;
+                background: #fff;
+                color: #096c50;
+                padding: 10px 28px 10px 22px;
                 font-weight: 600;
+                letter-spacing: 0;
+                box-shadow: 0 1.2px 7px 0 rgba(44, 90, 92, 0.06);
+                cursor: pointer;
+                outline: none;
+                gap: 12px;
+                transition: all .17s;
             }
-        }
-    </style>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const stickyBar = document.querySelector('.fixedbar-sticky-contact');
-            if (!stickyBar) return;
+            .btn-sticky-callback:hover,
+            .btn-sticky-callback:focus {
+                background: #ecfff6;
+                color: #044b38;
+                border-color: #089971;
+            }
 
-            // Remove the fixedbar-hide class to make it work
-            stickyBar.classList.remove('fixedbar-hide');
+            /* WhatsApp Button */
+            .btn-sticky-whatsapp {
+                display: flex;
+                align-items: center;
+                font-size: 1.16rem;
+                border-radius: 8px;
+                padding: 10px 34px 10px 24px;
+                font-weight: 600;
+                background: #38c457;
+                color: #fff;
+                border: none;
+                text-decoration: none;
+                gap: 13px;
+                box-shadow: 0 1.2px 7px 0 rgba(64, 196, 87, 0.09);
+                transition: all .16s;
+            }
 
-            // Get the banner height (adjust selector if needed)
-            const banner = document.querySelector('.rbt-breadcrumb-default');
-            const bannerHeight = banner ? banner.offsetHeight : 400; // fallback to 400px if banner not found
+            .btn-sticky-whatsapp:hover,
+            .btn-sticky-whatsapp:focus {
+                background: #249f3e;
+                color: #fff;
+            }
 
-            window.addEventListener('scroll', function () {
-                let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            /* Icons */
+            .btn-sticky-callback i,
+            .btn-sticky-whatsapp i {
+                font-size: 1.25em;
+                margin-right: 7px;
+                display: inline-block;
+                vertical-align: -2px;
+            }
 
-                // If scrolled past banner - SHOW and keep visible
-                if (scrollTop > bannerHeight) {
-                    stickyBar.classList.add('show');
+            @media (max-width:680px) {
+                .fixedbar-sticky-contact {
+                    flex-direction: column;
+                    gap: 9px;
+                    padding: 8px 0 9px 0;
+                    min-height: auto;
                 }
-                // If inside banner area - HIDE
-                else {
-                    stickyBar.classList.remove('show');
-                }
-            }, false);
-        });
 
-        function handleStickyCallback() {
-            // Add your callback handling logic here
-            alert('Callback requested!');
-        }
-    </script>
+                .btn-sticky-callback,
+                .btn-sticky-whatsapp {
+                    width: 98vw;
+                    justify-content: center;
+                    padding: 12px 0;
+                    font-size: 1rem;
+                    border-radius: 9px;
+                    font-weight: 600;
+                }
+            }
+        </style>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const stickyBar = document.querySelector('.fixedbar-sticky-contact');
+                if (!stickyBar) return;
+
+                // Remove the fixedbar-hide class to make it work
+                stickyBar.classList.remove('fixedbar-hide');
+
+                // Get the banner height (adjust selector if needed)
+                const banner = document.querySelector('.rbt-breadcrumb-default');
+                const bannerHeight = banner ? banner.offsetHeight : 400; // fallback to 400px if banner not found
+
+                window.addEventListener('scroll', function () {
+                    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+                    // If scrolled past banner - SHOW and keep visible
+                    if (scrollTop > bannerHeight) {
+                        stickyBar.classList.add('show');
+                    }
+                    // If inside banner area - HIDE
+                    else {
+                        stickyBar.classList.remove('show');
+                    }
+                }, false);
+            });
+
+            function handleStickyCallback() {
+                // Add your callback handling logic here
+                alert('Callback requested!');
+            }
+        </script>
         <!-- end sticky -->
-        <section class="page-header1" style="margin-top: 58px;">
+        <section class="page-header1">
             <div class="overlay"></div> <!-- Overlay -->
             <div class="container">
                 <div class="row gutter-y-60">
@@ -511,26 +531,29 @@
                                         <span class="about-two__info__icon">
                                             <i class="icon-check-2"></i>
                                         </span>
-                                        <h4 class="about-two__info__title" style="color: white;">85% placement rate with salaries upto 9 LPA
+                                        <h4 class="about-two__info__title" style="color: white;">85% placement rate with
+                                            salaries upto 9 LPA
                                         </h4>
                                     </div>
                                 </div>
-                               
+
                                 <div class="col-sm-12 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                                     <div class="about-two__info">
                                         <span class="about-two__info__icon">
                                             <i class="icon-check-2"></i>
                                         </span>
-                                        <h4 class="about-two__info__title" style="color: white;">2.5 Months (Weekdays) | 5 Months (Weekends)</h4>
+                                        <h4 class="about-two__info__title" style="color: white;">2.5 Months (Weekdays) |
+                                            5 Months (Weekends)</h4>
                                     </div>
                                 </div>
 
-                                 <div class="col-sm-12 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
+                                <div class="col-sm-12 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms">
                                     <div class="about-two__info">
                                         <span class="about-two__info__icon">
                                             <i class="icon-check-2"></i>
                                         </span>
-                                        <h4 class="about-two__info__title" style="color: white;">Best Education Provider in Finance at 30th Elets Worlds Education Summit 2024</h4>
+                                        <h4 class="about-two__info__title" style="color: white;">Best Education Provider
+                                            in Finance at 30th Elets Worlds Education Summit 2024</h4>
                                     </div>
                                 </div>
                             </div>
@@ -554,9 +577,10 @@
                                     </a><!-- /.eduhive-btn -->
                                 </div><!-- /.main-slider-two__button__inner -->
                             </div>
-                            <div class="about-two__button wow fadeInUp" data-wow-duration="1500ms"
-                                data-wow-delay="00ms" style="display: flex; column-gap: 20px;">
-                                <a href="assets/brochure/CIBOP.pdf" class="eduhive-btn" download style="background-color: white; color: #035642;">
+                            <div class="about-two__button wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="00ms"
+                                style="display: flex; column-gap: 20px;">
+                                <a href="assets/brochure/CIBOP.pdf" class="eduhive-btn" download
+                                    style="background-color: white; color: #035642;">
                                     <span>Download Brochure</span>
                                     <!-- <span class="eduhive-btn__icon">
                                         <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
@@ -938,521 +962,526 @@
         </section><!-- /.online-class section-space-bottom -->
 
 
-       <section class="container-testimonial">
-    <div class="wrap-testimonial-content">
-        <div class="bar-testimonial-header">
-            <span class="info-testimonial-hint">Curious how people are using Angelworld?</span>
-            <h2 class="title-testimonial-main">Hear what our customers are saying</h2>
-        </div>
-        <div class="wrap-testimonial-cards">
-            <div class="row-cards-testimonial">
-                <!-- Card 1 -->
-                <div class="single-testimonial-card">
-                    <div class="cube-testimonial-video"
-                        data-video-url="https://www.youtube.com/watch?v=ZGNBOzKrc1U&list=RDZGNBOzKrc1U&start_radio=1"
-                        onclick="openTestimonialModal(this)">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
-                            alt="User" class="img-testimonial-video">
-                        <button class="btn-play-testimonial">
-                            <i class="fa fa-play"></i>
-                        </button>
-                        <div class="layer-testimonial-user">
-                            <img class="avatar-testimonial-user"
-                                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
-                                alt="Emily Manekshaw">
-                            <div class="details-testimonial-user">
-                                <span class="label-testimonial-name">Emily Manekshaw</span>
-                                <span class="label-testimonial-job">COO, Prime Inc.</span>
+        <section class="container-testimonial">
+            <div class="wrap-testimonial-content">
+                <div class="bar-testimonial-header">
+                    <span class="info-testimonial-hint">Curious how people are using Angelworld?</span>
+                    <h2 class="title-testimonial-main">Hear what our customers are saying</h2>
+                </div>
+                <div class="wrap-testimonial-cards">
+                    <div class="row-cards-testimonial">
+                        <!-- Card 1 -->
+                        <div class="single-testimonial-card">
+                            <div class="cube-testimonial-video"
+                                data-video-url="https://www.youtube.com/watch?v=ZGNBOzKrc1U&list=RDZGNBOzKrc1U&start_radio=1"
+                                onclick="openTestimonialModal(this)">
+                                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop"
+                                    alt="User" class="img-testimonial-video">
+                                <button class="btn-play-testimonial">
+                                    <i class="fa fa-play"></i>
+                                </button>
+                                <div class="layer-testimonial-user">
+                                    <img class="avatar-testimonial-user"
+                                        src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
+                                        alt="Emily Manekshaw">
+                                    <div class="details-testimonial-user">
+                                        <span class="label-testimonial-name">Emily Manekshaw</span>
+                                        <span class="label-testimonial-job">COO, Prime Inc.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-testimonial-desc">
+                                <p>"This platform transformed the way we operate. The tools are intuitive and the
+                                    support team is outstanding."</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="section-testimonial-desc">
-                        <p>"This platform transformed the way we operate. The tools are intuitive and the
-                            support team is outstanding."</p>
+                        <!-- Card 2 -->
+                        <div class="single-testimonial-card">
+                            <div class="cube-testimonial-video"
+                                data-video-url="https://youtu.be/ZGNBOzKrc1U?si=sGwa1Qc7r0QBasOl"
+                                onclick="openTestimonialModal(this)">
+                                <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop"
+                                    alt="User" class="img-testimonial-video">
+                                <button class="btn-play-testimonial">
+                                    <i class="fa fa-play"></i>
+                                </button>
+                                <div class="layer-testimonial-user">
+                                    <img class="avatar-testimonial-user"
+                                        src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop"
+                                        alt="Emily Manekshaw">
+                                    <div class="details-testimonial-user">
+                                        <span class="label-testimonial-name">Emily Manekshaw</span>
+                                        <span class="label-testimonial-job">COO, Prime Inc.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-testimonial-desc">
+                                <p>"Amazing experience from start to finish! The user interface is clean and the
+                                    features are exactly what we needed."</p>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="single-testimonial-card">
+                            <div class="cube-testimonial-video"
+                                data-video-url="https://youtu.be/ZGNBOzKrc1U?si=sGwa1Qc7r0QBasOl"
+                                onclick="openTestimonialModal(this)">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
+                                    alt="User" class="img-testimonial-video">
+                                <button class="btn-play-testimonial">
+                                    <i class="fa fa-play"></i>
+                                </button>
+                                <div class="layer-testimonial-user">
+                                    <img class="avatar-testimonial-user"
+                                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+                                        alt="David Cooper">
+                                    <div class="details-testimonial-user">
+                                        <span class="label-testimonial-name">David Cooper</span>
+                                        <span class="label-testimonial-job">CTO, Tech Corp.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-testimonial-desc">
+                                <p>"The customer service is exceptional and the ROI has been phenomenal. Couldn't be
+                                    happier!"</p>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="single-testimonial-card">
+                            <div class="cube-testimonial-video"
+                                data-video-url="https://youtu.be/ZGNBOzKrc1U?si=sGwa1Qc7r0QBasOl"
+                                onclick="openTestimonialModal(this)">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
+                                    alt="User" class="img-testimonial-video">
+                                <button class="btn-play-testimonial">
+                                    <i class="fa fa-play"></i>
+                                </button>
+                                <span class="watermark-credit-testimonial">getty<br>images</span>
+                                <div class="layer-testimonial-user">
+                                    <img class="avatar-testimonial-user"
+                                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
+                                        alt="Heath Badger">
+                                    <div class="details-testimonial-user">
+                                        <span class="label-testimonial-name">Heath Badger</span>
+                                        <span class="label-testimonial-job">CEO, HubSpot Inc.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="section-testimonial-desc">
+                                <p>"Best investment we've made this year. The analytics dashboard gives us real-time
+                                    insights."</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <!-- Card 2 -->
-                <div class="single-testimonial-card">
-                    <div class="cube-testimonial-video"
-                        data-video-url="https://youtu.be/ZGNBOzKrc1U?si=sGwa1Qc7r0QBasOl"
-                        onclick="openTestimonialModal(this)">
-                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop"
-                            alt="User" class="img-testimonial-video">
-                        <button class="btn-play-testimonial">
-                            <i class="fa fa-play"></i>
-                        </button>
-                        <div class="layer-testimonial-user">
-                            <img class="avatar-testimonial-user"
-                                src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop"
-                                alt="Emily Manekshaw">
-                            <div class="details-testimonial-user">
-                                <span class="label-testimonial-name">Emily Manekshaw</span>
-                                <span class="label-testimonial-job">COO, Prime Inc.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-testimonial-desc">
-                        <p>"Amazing experience from start to finish! The user interface is clean and the
-                            features are exactly what we needed."</p>
-                    </div>
+                <div class="arrow-testimonial-nav">
+                    <button onclick="scrollTestimonialCards('left')" class="arrow-control-testimonial"><i
+                            class="fa fa-chevron-left"></i></button>
+                    <button onclick="scrollTestimonialCards('right')" class="arrow-control-testimonial"><i
+                            class="fa fa-chevron-right"></i></button>
                 </div>
-                <!-- Card 3 -->
-                <div class="single-testimonial-card">
-                    <div class="cube-testimonial-video"
-                        data-video-url="https://youtu.be/ZGNBOzKrc1U?si=sGwa1Qc7r0QBasOl"
-                        onclick="openTestimonialModal(this)">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
-                            alt="User" class="img-testimonial-video">
-                        <button class="btn-play-testimonial">
-                            <i class="fa fa-play"></i>
-                        </button>
-                        <div class="layer-testimonial-user">
-                            <img class="avatar-testimonial-user"
-                                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
-                                alt="David Cooper">
-                            <div class="details-testimonial-user">
-                                <span class="label-testimonial-name">David Cooper</span>
-                                <span class="label-testimonial-job">CTO, Tech Corp.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-testimonial-desc">
-                        <p>"The customer service is exceptional and the ROI has been phenomenal. Couldn't be
-                            happier!"</p>
-                    </div>
-                </div>
-                <!-- Card 4 -->
-                <div class="single-testimonial-card">
-                    <div class="cube-testimonial-video"
-                        data-video-url="https://youtu.be/ZGNBOzKrc1U?si=sGwa1Qc7r0QBasOl"
-                        onclick="openTestimonialModal(this)">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop"
-                            alt="User" class="img-testimonial-video">
-                        <button class="btn-play-testimonial">
-                            <i class="fa fa-play"></i>
-                        </button>
-                        <span class="watermark-credit-testimonial">getty<br>images</span>
-                        <div class="layer-testimonial-user">
-                            <img class="avatar-testimonial-user"
-                                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
-                                alt="Heath Badger">
-                            <div class="details-testimonial-user">
-                                <span class="label-testimonial-name">Heath Badger</span>
-                                <span class="label-testimonial-job">CEO, HubSpot Inc.</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-testimonial-desc">
-                        <p>"Best investment we've made this year. The analytics dashboard gives us real-time
-                            insights."</p>
-                    </div>
+            </div>
+        </section>
+
+        <!-- Modal -->
+        <div id="modal-testimonial-video" class="modal-testimonial-video" onclick="closeTestimonialModal()">
+            <div class="inner-modal-testimonial" onclick="event.stopPropagation()">
+                <span class="close-modal-testimonial" onclick="closeTestimonialModal()">&times;</span>
+                <div class="box-modal-testimonial-video">
+                    <iframe id="modalPlayerTestimonial" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </div>
-        <div class="arrow-testimonial-nav">
-            <button onclick="scrollTestimonialCards('left')" class="arrow-control-testimonial"><i
-                    class="fa fa-chevron-left"></i></button>
-            <button onclick="scrollTestimonialCards('right')" class="arrow-control-testimonial"><i
-                    class="fa fa-chevron-right"></i></button>
-        </div>
-    </div>
-</section>
 
-<!-- Modal -->
-<div id="modal-testimonial-video" class="modal-testimonial-video" onclick="closeTestimonialModal()">
-    <div class="inner-modal-testimonial" onclick="event.stopPropagation()">
-        <span class="close-modal-testimonial" onclick="closeTestimonialModal()">&times;</span>
-        <div class="box-modal-testimonial-video">
-            <iframe id="modalPlayerTestimonial" src="" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
-    </div>
-</div>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, sans-serif;
+            }
 
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: Arial, sans-serif;
-    }
+            .container-testimonial {
+                background: #fff;
+                padding: 60px 0;
+            }
 
-    .container-testimonial {
-        background: #fff;
-        padding: 60px 0;
-    }
+            .wrap-testimonial-content {
+                max-width: 1140px;
+                margin: 0 auto;
+                padding: 0 20px;
+            }
 
-    .wrap-testimonial-content {
-        max-width: 1140px;
-        margin: 0 auto;
-        padding: 0 20px;
-    }
+            .bar-testimonial-header {
+                margin-bottom: 35px;
+            }
 
-    .bar-testimonial-header {
-        margin-bottom: 35px;
-    }
+            .info-testimonial-hint {
+                color: #845ef7;
+                font-size: 0.85rem;
+                margin-bottom: 8px;
+                font-weight: 500;
+                letter-spacing: 0.5px;
+                display: block;
+            }
 
-    .info-testimonial-hint {
-        color: #845ef7;
-        font-size: 0.85rem;
-        margin-bottom: 8px;
-        font-weight: 500;
-        letter-spacing: 0.5px;
-        display: block;
-    }
+            .title-testimonial-main {
+                font-size: 2.2rem;
+                font-weight: 700;
+                color: #1a1a2e;
+                margin: 0;
+                line-height: 1.3;
+            }
 
-    .title-testimonial-main {
-        font-size: 2.2rem;
-        font-weight: 700;
-        color: #1a1a2e;
-        margin: 0;
-        line-height: 1.3;
-    }
+            .wrap-testimonial-cards {
+                overflow: hidden;
+                position: relative;
+            }
 
-    .wrap-testimonial-cards {
-        overflow: hidden;
-        position: relative;
-    }
+            .row-cards-testimonial {
+                display: flex;
+                gap: 24px;
+                overflow-x: auto;
+                scroll-behavior: smooth;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
 
-    .row-cards-testimonial {
-        display: flex;
-        gap: 24px;
-        overflow-x: auto;
-        scroll-behavior: smooth;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
+            .row-cards-testimonial::-webkit-scrollbar {
+                display: none;
+            }
 
-    .row-cards-testimonial::-webkit-scrollbar {
-        display: none;
-    }
+            .single-testimonial-card {
+                background: #fff;
+                border-radius: 17px;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+                width: 285px;
+                flex-shrink: 0;
+                overflow: hidden;
+                transition: transform 0.3s, box-shadow 0.3s;
+                display: flex;
+                flex-direction: column;
+            }
 
-    .single-testimonial-card {
-        background: #fff;
-        border-radius: 17px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-        width: 285px;
-        flex-shrink: 0;
-        overflow: hidden;
-        transition: transform 0.3s, box-shadow 0.3s;
-        display: flex;
-        flex-direction: column;
-    }
+            .single-testimonial-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 24px rgba(108, 92, 231, 0.12);
+            }
 
-    .single-testimonial-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 24px rgba(108, 92, 231, 0.12);
-    }
+            .cube-testimonial-video {
+                position: relative;
+                width: 100%;
+                height: 285px;
+                background: #f6f7fa;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
 
-    .cube-testimonial-video {
-        position: relative;
-        width: 100%;
-        height: 285px;
-        background: #f6f7fa;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
+            .img-testimonial-video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
 
-    .img-testimonial-video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-    }
+            .btn-play-testimonial {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+                width: 54px;
+                height: 54px;
+                border-radius: 50%;
+                border: none;
+                background: rgba(255, 255, 255, 0.9);
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: all 0.3s;
+                pointer-events: none;
+            }
 
-    .btn-play-testimonial {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-        width: 54px;
-        height: 54px;
-        border-radius: 50%;
-        border: none;
-        background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: all 0.3s;
-        pointer-events: none;
-    }
+            .cube-testimonial-video:hover .btn-play-testimonial {
+                background: #845ef7;
+                transform: translate(-50%, -50%) scale(1.12);
+            }
 
-    .cube-testimonial-video:hover .btn-play-testimonial {
-        background: #845ef7;
-        transform: translate(-50%, -50%) scale(1.12);
-    }
+            .btn-play-testimonial i {
+                color: #845ef7;
+                font-size: 1.3rem;
+            }
 
-    .btn-play-testimonial i {
-        color: #845ef7;
-        font-size: 1.3rem;
-    }
+            .cube-testimonial-video:hover .btn-play-testimonial i {
+                color: #fff;
+            }
 
-    .cube-testimonial-video:hover .btn-play-testimonial i {
-        color: #fff;
-    }
+            .layer-testimonial-user {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background: linear-gradient(0deg, rgba(18, 16, 30, 0.92) 92%, rgba(18, 16, 30, 0) 100%);
+                padding: 16px 14px 10px 14px;
+                display: flex;
+                align-items: center;
+                z-index: 2;
+            }
 
-    .layer-testimonial-user {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        background: linear-gradient(0deg, rgba(18, 16, 30, 0.92) 92%, rgba(18, 16, 30, 0) 100%);
-        padding: 16px 14px 10px 14px;
-        display: flex;
-        align-items: center;
-        z-index: 2;
-    }
+            .avatar-testimonial-user {
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+                object-fit: cover;
+                border: 2px solid #f0edff;
+                margin-right: 8px;
+                flex-shrink: 0;
+            }
 
-    .avatar-testimonial-user {
-        width: 36px;
-        height: 36px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid #f0edff;
-        margin-right: 8px;
-        flex-shrink: 0;
-    }
+            .details-testimonial-user {
+                display: flex;
+                flex-direction: column;
+            }
 
-    .details-testimonial-user {
-        display: flex;
-        flex-direction: column;
-    }
+            .label-testimonial-name {
+                font-size: 1rem;
+                font-weight: 700;
+                color: #fff;
+            }
 
-    .label-testimonial-name {
-        font-size: 1rem;
-        font-weight: 700;
-        color: #fff;
-    }
+            .label-testimonial-job {
+                font-size: 0.87rem;
+                color: #ffe9ec;
+                line-height: 1.16;
+            }
 
-    .label-testimonial-job {
-        font-size: 0.87rem;
-        color: #ffe9ec;
-        line-height: 1.16;
-    }
+            .watermark-credit-testimonial {
+                position: absolute;
+                right: 12px;
+                bottom: 78px;
+                font-size: 0.69rem;
+                line-height: 1.1;
+                color: #fff;
+                background: rgba(0, 0, 0, 0.32);
+                padding: 4px 8px;
+                border-radius: 4px;
+                z-index: 3;
+                text-align: center;
+            }
 
-    .watermark-credit-testimonial {
-        position: absolute;
-        right: 12px;
-        bottom: 78px;
-        font-size: 0.69rem;
-        line-height: 1.1;
-        color: #fff;
-        background: rgba(0, 0, 0, 0.32);
-        padding: 4px 8px;
-        border-radius: 4px;
-        z-index: 3;
-        text-align: center;
-    }
+            .section-testimonial-desc {
+                padding: 16px 12px 19px 16px;
+                background: #fff;
+            }
 
-    .section-testimonial-desc {
-        padding: 16px 12px 19px 16px;
-        background: #fff;
-    }
+            .section-testimonial-desc p {
+                font-size: 0.97rem;
+                color: #4a4a6a;
+                line-height: 1.48;
+                margin: 0;
+                font-style: italic;
+            }
 
-    .section-testimonial-desc p {
-        font-size: 0.97rem;
-        color: #4a4a6a;
-        line-height: 1.48;
-        margin: 0;
-        font-style: italic;
-    }
+            .arrow-testimonial-nav {
+                display: flex;
+                justify-content: flex-end;
+                gap: 12px;
+                margin-top: 30px;
+            }
 
-    .arrow-testimonial-nav {
-        display: flex;
-        justify-content: flex-end;
-        gap: 12px;
-        margin-top: 30px;
-    }
+            .arrow-control-testimonial {
+                background: #f0edff;
+                color: #845ef7;
+                border: none;
+                border-radius: 50%;
+                width: 44px;
+                height: 44px;
+                font-size: 1.1rem;
+                cursor: pointer;
+                transition: all 0.3s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
-    .arrow-control-testimonial {
-        background: #f0edff;
-        color: #845ef7;
-        border: none;
-        border-radius: 50%;
-        width: 44px;
-        height: 44px;
-        font-size: 1.1rem;
-        cursor: pointer;
-        transition: all 0.3s;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+            .arrow-control-testimonial:hover {
+                background: #845ef7;
+                color: #fff;
+                transform: translateY(-2px);
+                box-shadow: 0 4px 12px rgba(180, 145, 240, 0.2);
+            }
 
-    .arrow-control-testimonial:hover {
-        background: #845ef7;
-        color: #fff;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(180, 145, 240, 0.2);
-    }
+            /* Modal */
+            .modal-testimonial-video {
+                display: none;
+                position: fixed;
+                z-index: 9999;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.93);
+                animation: fadeIn 0.3s;
+            }
 
-    /* Modal */
-    .modal-testimonial-video {
-        display: none;
-        position: fixed;
-        z-index: 9999;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.93);
-        animation: fadeIn 0.3s;
-    }
+            .modal-testimonial-video.active {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
 
-    .modal-testimonial-video.active {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+            .inner-modal-testimonial {
+                position: relative;
+                width: 95%;
+                max-width: 850px;
+                background: #000;
+                border-radius: 13px;
+                overflow: hidden;
+                animation: slideIn 0.3s;
+            }
 
-    .inner-modal-testimonial {
-        position: relative;
-        width: 95%;
-        max-width: 850px;
-        background: #000;
-        border-radius: 13px;
-        overflow: hidden;
-        animation: slideIn 0.3s;
-    }
+            .close-modal-testimonial {
+                position: absolute;
+                top: -38px;
+                right: 0;
+                color: #fff;
+                font-size: 38px;
+                font-weight: 300;
+                cursor: pointer;
+                z-index: 10000;
+                transition: color 0.2s;
+            }
 
-    .close-modal-testimonial {
-        position: absolute;
-        top: -38px;
-        right: 0;
-        color: #fff;
-        font-size: 38px;
-        font-weight: 300;
-        cursor: pointer;
-        z-index: 10000;
-        transition: color 0.2s;
-    }
+            .close-modal-testimonial:hover {
+                color: #845ef7;
+            }
 
-    .close-modal-testimonial:hover {
-        color: #845ef7;
-    }
+            .box-modal-testimonial-video {
+                position: relative;
+                padding-bottom: 56.25%;
+                height: 0;
+                overflow: hidden;
+            }
 
-    .box-modal-testimonial-video {
-        position: relative;
-        padding-bottom: 56.25%;
-        height: 0;
-        overflow: hidden;
-    }
+            .box-modal-testimonial-video iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
 
-    .box-modal-testimonial-video iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                }
 
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
+                to {
+                    opacity: 1;
+                }
+            }
 
-    @keyframes slideIn {
-        from {
-            transform: scale(0.82);
-            opacity: 0;
-        }
-        to {
-            transform: scale(1);
-            opacity: 1;
-        }
-    }
+            @keyframes slideIn {
+                from {
+                    transform: scale(0.82);
+                    opacity: 0;
+                }
 
-    @media (max-width: 900px) {
-        .single-testimonial-card {
-            width: 240px;
-        }
-        .cube-testimonial-video {
-            height: 240px;
-        }
-    }
+                to {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
 
-    @media (max-width: 600px) {
-        .single-testimonial-card {
-            width: 200px;
-        }
-        .cube-testimonial-video {
-            height: 200px;
-        }
-        .arrow-testimonial-nav {
-            justify-content: center;
-        }
-    }
-</style>
+            @media (max-width: 900px) {
+                .single-testimonial-card {
+                    width: 240px;
+                }
 
-<script>
-    /**
-     * Convert YouTube URL to embed format
-     * Handles various YouTube URL formats:
-     * - https://youtu.be/VIDEO_ID
-     * - https://www.youtube.com/watch?v=VIDEO_ID
-     * - https://youtube.com/watch?v=VIDEO_ID
-     */
-    function getYouTubeEmbedUrl(url) {
-        let videoId = '';
-        
-        // Handle youtu.be format
-        if (url.includes('youtu.be/')) {
-            videoId = url.split('youtu.be/')[1].split('?')[0].split('&')[0];
-        }
-        // Handle youtube.com/watch format
-        else if (url.includes('youtube.com/watch')) {
-            const urlParams = new URLSearchParams(url.split('?')[1]);
-            videoId = urlParams.get('v');
-        }
-        // Handle youtube.com/embed format (already correct)
-        else if (url.includes('youtube.com/embed/')) {
-            return url;
-        }
-        
-        // Return embed URL with autoplay
-        return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-    }
+                .cube-testimonial-video {
+                    height: 240px;
+                }
+            }
 
-    function openTestimonialModal(element) {
-        const videoUrl = element.getAttribute('data-video-url');
-        const modal = document.getElementById('modal-testimonial-video');
-        const player = document.getElementById('modalPlayerTestimonial');
-        
-        // Convert to embed URL
-        const embedUrl = getYouTubeEmbedUrl(videoUrl);
-        player.src = embedUrl;
-        
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
+            @media (max-width: 600px) {
+                .single-testimonial-card {
+                    width: 200px;
+                }
 
-    function closeTestimonialModal() {
-        const modal = document.getElementById('modal-testimonial-video');
-        const player = document.getElementById('modalPlayerTestimonial');
-        player.src = "";
-        modal.classList.remove('active');
-        document.body.style.overflow = 'auto';
-    }
+                .cube-testimonial-video {
+                    height: 200px;
+                }
 
-    function scrollTestimonialCards(direction) {
-        const container = document.querySelector('.row-cards-testimonial');
-        const scrollAmount = 309;
-        direction === 'left' ? container.scrollLeft -= scrollAmount : container.scrollLeft += scrollAmount;
-    }
+                .arrow-testimonial-nav {
+                    justify-content: center;
+                }
+            }
+        </style>
 
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeTestimonialModal();
-    });
-</script>
+        <script>
+            /**
+             * Convert YouTube URL to embed format
+             * Handles various YouTube URL formats:
+             * - https://youtu.be/VIDEO_ID
+             * - https://www.youtube.com/watch?v=VIDEO_ID
+             * - https://youtube.com/watch?v=VIDEO_ID
+             */
+            function getYouTubeEmbedUrl(url) {
+                let videoId = '';
+
+                // Handle youtu.be format
+                if (url.includes('youtu.be/')) {
+                    videoId = url.split('youtu.be/')[1].split('?')[0].split('&')[0];
+                }
+                // Handle youtube.com/watch format
+                else if (url.includes('youtube.com/watch')) {
+                    const urlParams = new URLSearchParams(url.split('?')[1]);
+                    videoId = urlParams.get('v');
+                }
+                // Handle youtube.com/embed format (already correct)
+                else if (url.includes('youtube.com/embed/')) {
+                    return url;
+                }
+
+                // Return embed URL with autoplay
+                return `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+            }
+
+            function openTestimonialModal(element) {
+                const videoUrl = element.getAttribute('data-video-url');
+                const modal = document.getElementById('modal-testimonial-video');
+                const player = document.getElementById('modalPlayerTestimonial');
+
+                // Convert to embed URL
+                const embedUrl = getYouTubeEmbedUrl(videoUrl);
+                player.src = embedUrl;
+
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeTestimonialModal() {
+                const modal = document.getElementById('modal-testimonial-video');
+                const player = document.getElementById('modalPlayerTestimonial');
+                player.src = "";
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+
+            function scrollTestimonialCards(direction) {
+                const container = document.querySelector('.row-cards-testimonial');
+                const scrollAmount = 309;
+                direction === 'left' ? container.scrollLeft -= scrollAmount : container.scrollLeft += scrollAmount;
+            }
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeTestimonialModal();
+            });
+        </script>
 
 
         <!-- cta-one section -->
@@ -3688,7 +3717,6 @@
     </div><!-- /.mobile-nav__wrapper -->
     <div class="search-popup">
         <div class="search-popup__overlay search-toggler"></div>
-        <!-- /.search-popup__overlay -->
         <div class="search-popup__content">
             <form role="search" method="get" class="search-popup__form" action="about.html#">
                 <input type="text" id="search" placeholder="Search Here..." />
@@ -3697,7 +3725,6 @@
                 </button>
             </form>
         </div>
-        <!-- /.search-popup__content -->
     </div>
     <!-- /.search-popup -->
 

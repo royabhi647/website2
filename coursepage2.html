@@ -71,16 +71,16 @@
 
     <!-- /.preloader -->
     <div class="page-wrapper active-light-mode">
-        <header class="main-header main-header--two sticky-header sticky-header--normal">
-            <div class="container-fluid">
+        <header class="main-header main-header--two sticky-header sticky-header--normal"
+            style="position: sticky; background-color: white;">
+            <div class="container">
                 <div class="main-header__inner">
-                    <!-- Your existing content (unchanged) -->
                     <div class="main-header__left">
                         <div class="main-header__logo logo-retina">
                             <a href="index.html">
-                                <img src="assets/images/logo1.png" alt="eduhive HTML" width="209">
+                                <img src="assets/images/logo.png" alt="eduhive HTML" width="209">
                             </a>
-                        </div>
+                        </div><!-- /.main-header__logo -->
                         <div class="main-header__courses">
                             <div class="main-header__courses__text">
                                 <span class="main-header__courses__icon-list">
@@ -90,44 +90,78 @@
                                 <span class="main-header__courses__icon-arrow">
                                     <i class="icon-chevron-down"></i>
                                 </span>
-                            </div>
-                            <ul class="main-header__courses__list">
-                                <li><a href="wordpress-development.html">Wordpress Development</a></li>
-                                <li><a href="data-science.html">Data Science</a></li>
-                                <li><a href="web-development.html">Web Development</a></li>
-                                <li><a href="uiux-design.html">UI/UX Design</a></li>
-                                <li><a href="graphics-design.html">Graphics Design</a></li>
-                                <li><a href="digital-marketing.html">Digital Marketing</a></li>
-                                <li><a href="search-engine-optimization.html">Search Engine Optimization</a></li>
-                                <li><a href="apps-development.html">Apps Development</a></li>
-                                <li><a href="web-design.html">Web Design</a></li>
+                            </div><!-- /.main-header__courses__text -->
+                            <ul class="main-header__courses__list" style="margin: 0px;">
+                                <li style="margin: 0px;"><a href="#">Neuroalchemy Transformation</a></li>
+                                <li><a href="#">Neuroscience of Resilience</a></li>
+                                <li><a href="#">The Science of Confidence</a></li>
+                                <li><a href="#">Mindful Manifestation </a></li>
+                                <li><a href="#">Brain Science</a></li>
+                                <li><a href="#">Cellular Rebirth </a></li>
+                                <li><a href="#">Stress Management </a></li>
+                                <li><a href="#">Goal Setting </a></li>
+                                <li><a href="#">NLP Fundamentals</a></li>
+                            </ul><!-- /.main-header__courses__list -->
+                        </div><!-- /.main-header__courses -->
+                    </div><!-- /.main-header__left -->
+                    <div class="main-header__right" style="margin-right: 31px;">
+                        <nav class="main-header__nav main-menu">
+                            <ul class="main-menu__list">
+                                <li class="dropdown">
+                                    <a href="#" style="text-decoration: none;">Categories</a>
+                                    <ul>
+                                        <li><a href="#">All Categories</a></li>
+                                        <li><a href="#">Mind</a></li>
+                                        <li><a href="#">Body</a></li>
+                                        <li><a href="#">Soul</a></li>
+                                        <li><a href="#">Entrepreneurship</a></li>
+                                        <li><a href="#">Career</a></li>
+                                        <li><a href="#">Relationship</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" style="text-decoration: none;">Community</a>
+                                    <ul>
+                                        <li><a href="#">Community First</a></li>
+                                        <li><a href="#">Global Events</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" style="text-decoration: none;">Results</a>
+                                    <ul>
+                                        <li><a href="#">20000+ Case Studies</a></li>
+                                        <li><a href="#">Our Transformational Model</a></li>
+                                        <li><a href="#">How MindValley Works?</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" style="text-decoration: none;">At Work</a>
+                                    <ul>
+                                        <li><a href="#">Business</a></li>
+                                        <li><a href="#">Find A Coach</a></li>
+                                        <li><a href="#">Become A Coach</a></li>
+
+                                    </ul>
+                                </li>
+
                             </ul>
-                        </div>
-                        <nav class="main-header__nav main-menu" style="margin-left: 30px;">
-                            <ul class="main-menu__list" style="margin:0">
-                                <li style="margin: 0;"><a href="about.html">Categories</a></li>
-                                <li><a href="about.html">Community</a></li>
-                                <li><a href="about.html">Results</a></li>
-                                <li><a href="about.html">At Work</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="main-header__right">
+                        </nav><!-- /.main-header__nav -->
                         <div class="mobile-nav__btn mobile-nav__toggler">
-                            <span></span><span></span><span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
-                        <a href="contact.html" class="main-header__btn eduhive-btn eduhive-btn--border">
-                            <span style="padding: 2px 0">Login</span>
-                        </a>
-                        <a href="contact.html" class="main-header__btn eduhive-btn">
+                        <!--<a href="#" class="btn btn-outline-primary">Login</a>-->
+                        <a href="#" class="main-header__btn eduhive-btn"
+                            style="height:40px; width:160px; text-decoration: none; position: relative;">
                             <span>Start Now</span>
-                            <span class="eduhive-btn__icon">
+                            <span class="eduhive-btn__icon" style="position: absolute; right: 2px;">
                                 <span class="eduhive-btn__icon__inner"><i class="icon-right-arrow"></i></span>
                             </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+                        </a><!-- /.main-header__btn eduhive-btn -->
+                    </div><!-- /.main-header__right -->
+                </div><!-- /.main-header__inner -->
+            </div><!-- /.container-fluid -->
         </header>
 
 
@@ -139,22 +173,20 @@
                 padding: 140px 0 80px;
             }
 
-            .page-header1 .overlay {
+            /* .page-header1 .overlay {
                 position: absolute;
                 top: 0;
                 left: 0;
                 right: 0;
                 bottom: 0;
                 background: rgba(0, 0, 0, 0.5);
-                /* dark overlay */
                 z-index: 1;
-            }
+            } */
 
-            .page-header1 .container {
+            /* .page-header1 .container {
                 position: relative;
                 z-index: 2;
-                /* keeps content above overlay */
-            }
+            } */
 
             /********************
     *
@@ -2986,16 +3018,14 @@
                         class="contect-static-input contect-static-contact-number" />
 
                     <div class="contect-static-select contect-static-location-select">
-                        <input type="text" placeholder="Enter Closest Location" required
-                            class="contect-static-input" />
+                        <input type="text" placeholder="Enter Closest Location" required class="contect-static-input" />
                     </div>
                 </div>
 
                 <!-- Row 3: Qualification -->
                 <div class="contect-static-row">
                     <div class="contect-static-select contect-static-qualification-select">
-                        <input type="text" placeholder="Enter Qualification" required
-                            class="contect-static-input" />
+                        <input type="text" placeholder="Enter Qualification" required class="contect-static-input" />
                     </div>
                 </div>
 

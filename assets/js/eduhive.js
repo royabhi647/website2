@@ -277,8 +277,8 @@
 
   if ($(".sticky-header").length) {
     $(".sticky-header")
-      .clone()
-      .insertAfter(".sticky-header")
+      // .clone()
+      // .insertAfter(".sticky-header")
       // .addClass("sticky-header--cloned");
   }
 
