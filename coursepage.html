@@ -3255,27 +3255,35 @@
                     <input type="email" class="contactcompact-input" placeholder="Enter Email ID*" required />
                 </div>
                 <div class="contactcompact-row">
-                    <select class="contactcompact-input contactcompact-select" style="max-width:128px;">
+                    <!-- <select class="contactcompact-input contactcompact-select" style="max-width:128px;">
                         <option>India (+91)</option>
                         <option>USA (+1)</option>
                         <option>UK (+44)</option>
-                    </select>
+                    </select> -->
+
+                    <input type="email" class="contactcompact-input" placeholder="Country Code*" required
+                        style="min-width: 95px; max-width: 128px;" />
+
                     <input type="tel" class="contactcompact-input" placeholder="Contact Number*" required />
-                    <select class="contactcompact-input contactcompact-select" style="max-width:200px;">
+                    <!-- <select class="contactcompact-input contactcompact-select" style="max-width:200px;">
                         <option value="">Select Closest Location</option>
                         <option>Bangalore</option>
                         <option>Mumbai</option>
                         <option>Delhi</option>
                         <option>Chennai</option>
-                    </select>
+                    </select> -->
+
+                    <input type="text" class="contactcompact-input" placeholder="Enter Closest Location*" required />
                 </div>
                 <div class="contactcompact-row">
-                    <select class="contactcompact-input contactcompact-select">
+                    <!-- <select class="contactcompact-input contactcompact-select">
                         <option value="">Select Qualification</option>
                         <option>Bachelor's</option>
                         <option>Master's</option>
                         <option>PhD</option>
-                    </select>
+                    </select> -->
+
+                    <input type="text" class="contactcompact-input" placeholder="Enter Qualification*" required />
                 </div>
                 <div class="contactcompact-accept">
                     <input type="checkbox" id="compact-terms" required />
@@ -3342,7 +3350,9 @@
         .contactcompact-input,
         .contactcompact-select {
             display: block;
-            padding: 13px 14px;
+            height: 50px;
+            /* padding: 13px 14px; */
+            padding-left: 15px;
             border-radius: 7px;
             border: 1.3px solid #b7e1d6;
             background: #fff;
@@ -3456,6 +3466,7 @@
             }
         }
     </style>
+
     <footer class="main-footer section-space-top">
         <div class="container">
             <div class="main-footer__top">
