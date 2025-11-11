@@ -164,6 +164,48 @@
             </div><!-- /.container-fluid -->
         </header>
 
+        <script>
+            // Fixed Header Solution - Always stays at top
+            (function () {
+                const header = document.querySelector('.main-header--two');
+                const pageWrapper = document.querySelector('.page-wrapper');
+
+                if (!header) return;
+
+                // Get header height
+                const headerHeight = header.offsetHeight;
+
+                // Convert to fixed positioning
+                function makeHeaderFixed() {
+                    header.style.position = 'fixed';
+                    header.style.top = '0';
+                    header.style.left = '0';
+                    header.style.right = '0';
+                    header.style.width = '100%';
+                    header.style.backgroundColor = 'white';
+                    header.style.zIndex = '9999';
+                    header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+
+                    // Add padding to page content so it doesn't hide under header
+                    if (pageWrapper) {
+                        pageWrapper.style.paddingTop = headerHeight + 'px';
+                    }
+                }
+
+                // Initialize
+                makeHeaderFixed();
+
+                // Update on resize
+                window.addEventListener('resize', function () {
+                    const newHeight = header.offsetHeight;
+                    if (pageWrapper) {
+                        pageWrapper.style.paddingTop = newHeight + 'px';
+                    }
+                });
+
+            })();
+        </script>
+
 
         <style>
             .page-header1 {
@@ -3031,8 +3073,10 @@
 
                 <!-- Terms Checkbox -->
                 <div class="contect-static-checkbox-container">
-                    <input type="checkbox" id="compact-terms" required class="contect-static-checkbox" style="width: 18px; height: 18px;"/>
-                    <label for="compact-terms" class="contect-static-checkbox-label" style="font-size: 17px; margin-left: 10px;">
+                    <input type="checkbox" id="compact-terms" required class="contect-static-checkbox"
+                        style="width: 18px; height: 18px;" />
+                    <label for="compact-terms" class="contect-static-checkbox-label"
+                        style="font-size: 17px; margin-left: 10px;">
                         I accept the <a href="#" class="contect-static-terms-link">Terms & Conditions</a>
                     </label>
                 </div>
